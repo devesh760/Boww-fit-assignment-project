@@ -1,0 +1,56 @@
+.ModalView{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 200;
+    border-radius: 5px;
+    width:500px;
+    background-color: #FFF;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-flow: column;
+    >.img-container{
+        height: 300px;
+        width: 100%;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    >p{
+        clip-path: polygon(16% 9%, 6% 18%, 39% 50%, 8% 85%, 18% 95%, 49% 59%, 87% 94%, 97% 84%, 59% 50%, 91% 14%, 83% 5%, 50% 45%);
+        background-color: #00000060;
+        height: 20px;
+        width: 20px;
+        align-self: flex-end;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    section{
+        p{
+            color: #00000090;
+        }
+        flex-grow: 10;
+        padding: 0 20px;
+        .img-name{
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            img{
+                height: 30px;
+                width: 30px;
+                border-radius: 30px;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+
+@media (max-width:530px){
+    .ModalView{
+        width: 350px;
+    }
+}

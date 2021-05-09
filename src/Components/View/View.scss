@@ -1,0 +1,108 @@
+.view{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 500px;
+    box-shadow: 3px 2px 10px 0px rgba(0,0,0,0.4);
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+    animation-name: float;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    .img-container{
+        width: 500px;
+        height: 200px;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            transition: 0.4s;
+        }
+        
+        p{
+            position: absolute;
+            top: 42%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 10;
+            color: #FFF;
+            background-color: rgba(0,0,0,0.4);
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: 0.4s;
+        }
+        p:hover{
+            opacity: 1;
+            cursor: pointer;
+            height: 103%;
+        }
+        p:hover + img{
+            
+            transform: scale(1.03);
+        }
+    }
+    section{
+        padding: 0 30px;
+        box-sizing: border-box;
+        .circles{
+            display: flex;
+             div{
+            background-color: red;
+            height: 15px;
+            width: 15px;
+            border-radius: 15px;
+            margin-right: 10px;
+            margin-top: 10px;
+            }
+            div:nth-of-type(1){
+                background-color: #08BDD5;
+            }
+            div:nth-of-type(2){
+                background-color: #FEC20B;    
+            }
+        }
+        box-sizing: border-box;
+        h4{
+            margin-top: 8px;
+            cursor: pointer;
+        }
+        h4:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        >p{
+            // width: 200px;
+            color: #00000099;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+        .name-data{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px 0;
+            color: #00000099;
+        }
+    }
+}
+@keyframes  float {
+    0%{transform: translateY(100vh);}
+    100%{transform: translateY(0vh);}
+}
+@media (max-width:570px) {
+    .view{
+        width: 350px;
+        .img-container{
+            img{
+                width:350px;
+            }
+        }
+    }
+
+}
